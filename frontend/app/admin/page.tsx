@@ -53,7 +53,7 @@ export default function AdminLogin() {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
-        }
+        },
       );
 
       const data = await response.json();
@@ -74,8 +74,8 @@ export default function AdminLogin() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center px-6">
-      <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
-        <h1 className="text-3xl font-bold text-primary mb-6 text-center">
+      <div className="bg-gray-300 rounded-lg shadow-xl p-8 max-w-md w-full">
+        <h1 className="text-3xl text-blue-900 font-bold text-primary mb-6 text-center">
           Admin Login
         </h1>
 
@@ -94,7 +94,7 @@ export default function AdminLogin() {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
+              className="w-full px-4 py-2 border text-blue-950 border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
               placeholder="admin@example.com"
             />
           </div>
@@ -113,7 +113,7 @@ export default function AdminLogin() {
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
+              className="w-full text-blue-950 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-secondary focus:border-transparent outline-none"
               placeholder="••••••••"
             />
           </div>
@@ -127,7 +127,7 @@ export default function AdminLogin() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full px-6 py-2 bg-secondary text-white rounded-lg hover:opacity-90 transition font-semibold disabled:opacity-50"
+            className="w-full px-6 py-2 bg-gray-900 text-white rounded-lg hover:opacity-90 transition font-semibold disabled:opacity-50"
           >
             {loading ? "Logging in..." : "Login"}
           </button>

@@ -75,7 +75,7 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary to-secondary flex items-center justify-center px-6">
       <div className="bg-gray-300 rounded-lg shadow-xl p-8 max-w-md w-full">
-        <h1 className="text-3xl text-blue-900 font-bold text-primary mb-6 text-center">
+        <h1 className="text-3xl text-blue-950 font-bold text-primary mb-6 text-center">
           Admin Login
         </h1>
 
@@ -132,12 +132,6 @@ export default function AdminLogin() {
             {loading ? "Logging in..." : "Login"}
           </button>
         </form>
-
-        <div className="mt-6 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
-          <p className="font-semibold mb-2">Demo Credentials:</p>
-          <p>Email: admin@example.com</p>
-          <p>Password: admin123</p>
-        </div>
       </div>
     </div>
   );

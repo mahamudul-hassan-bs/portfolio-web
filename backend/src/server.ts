@@ -23,11 +23,20 @@ const app = express();
 connectDB();
 
 // Middleware
+// app.use(
+//   cors({
+//     origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+//     credentials: true,
+//   }),
+// );
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
+    origin: function (origin, callback) {
+      console.log("Incoming Origin:", origin);
+      callback(null, true); // allow request
+    },
     credentials: true,
-  }),
+  })
 );
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));

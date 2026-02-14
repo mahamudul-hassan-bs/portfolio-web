@@ -25,11 +25,15 @@ connectDB();
 //Middleware
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN || "http://localhost:3000",
-    credentials: true,
-  }),
-);
+    origin: function (origin, callback) {
+      console.log("ENV Origin:", process.env.CORS_ORIGIN);
+      console.log("Request Origin:", origin);
 
+      callback(null, process.env.CORS_ORIGIN);
+    },
+    credentials: true,
+  })
+);
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 

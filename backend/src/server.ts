@@ -22,7 +22,7 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-Middleware
+//Middleware
 app.use(
   cors({
     origin: process.env.CORS_ORIGIN || "http://localhost:3000",
